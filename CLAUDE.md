@@ -39,23 +39,28 @@ All CTAs on this site redirect to https://www.cdc.company — specifically to th
 
 **Reference:** https://www.cdc.company — this site defines the visual language. Match its tone: professional, minimal, confident, premium.
 
-**Color palette:** Orange (#F57321 or close) + dark gray/charcoal + white. Same as CDC corporate.
+**Color palette:** Orange `#F47A1F` + dark `#1C1C1C` + light gray `#F4F4F4` + white. Same as CDC corporate.
 
-**Fonts available locally:**
-- `data materials/Goodly/` — Goodly (ExtraLight, Light, Regular, Medium, SemiBold, Bold) — primary display font
-- `data materials/Lato/` — Lato (all weights) — secondary/body font
+**Fonts — organized in `assets/fonts/`:**
+- Goodly-Bold.woff / .ttf — primary headlines
+- Goodly-SemiBold.woff / .ttf — subheadings
+- Goodly-Regular.woff / .ttf — medium text
+- Goodly-Light.woff / .ttf — body display
+- Lato TTF files are in `data materials/Lato/` — use for body text
 
-**Logos available locally:**
-- `data materials/cdc-logo-orange-pictogram (4).png`
-- `data materials/cdc-logo-orange (5).png`
+**Logos — organized in `assets/logos/`:**
+- `assets/logos/cdc-logo-orange (5).png` — full horizontal logo
+- `assets/logos/cdc-logo-orange-pictogram (4).png` — pictogram only (for footer)
 
-**Photos available locally:**
-- `data materials/20160125_125651.jpg`
-- `data materials/20170419_124027 - Kopie.jpg`
-- `data materials/Malaysia.jpg`
-- `data materials/Sample_Picture_Langkawi.JPG`
+**Photos — organized in `assets/images/` — ALL are real product shots (Langkawi, Malaysia installation):**
+- `assets/images/Sample_Picture_Langkawi.JPG` — wide panoramic, mountain + sky bridge → **use as hero background**
+- `assets/images/Malaysia.jpg` — cabin close-up from above, jungle canopy
+- `assets/images/20160125_125651.jpg` — cabin with passengers, clear sky + platform
+- `assets/images/20170419_124027 - Kopie.jpg` — cabin on track, wide mountain view
 
 **Visual style:** Large hero imagery, clean sections, generous whitespace, strong typography hierarchy. No generic stock AI aesthetic.
+
+**Design reference:** cdc.company — white sticky nav, full-viewport hero with dark overlay + large white type, CDC lettermark style. Sections alternate white / light-gray. Orange used as accent only.
 
 ## Funnel page structure (proposed)
 

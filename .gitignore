@@ -1,0 +1,12 @@
+# Research screenshots (generated during analysis)
+*.jpeg
+*.jpg
+!assets/images/*.jpg
+!assets/images/*.JPG
+
+# Playwright temp files
+.playwright-mcp/
+
+# OS
+.DS_Store
+Thumbs.db
