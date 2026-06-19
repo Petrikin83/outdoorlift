@@ -35,37 +35,37 @@ a { color: inherit; text-decoration: none; }
 
 @font-face {
   font-family: 'Goodly';
-  src: url('data%20materials/Goodly/WOFF/Goodly-Light.woff') format('woff');
+  src: url('assets/fonts/Goodly-Light.woff') format('woff');
   font-weight: 300; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'Goodly';
-  src: url('data%20materials/Goodly/WOFF/Goodly-Regular.woff') format('woff');
+  src: url('assets/fonts/Goodly-Regular.woff') format('woff');
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'Goodly';
-  src: url('data%20materials/Goodly/WOFF/Goodly-Semibold.woff') format('woff');
+  src: url('assets/fonts/Goodly-Semibold.woff') format('woff');
   font-weight: 600; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'Goodly';
-  src: url('data%20materials/Goodly/WOFF/Goodly-Bold.woff') format('woff');
+  src: url('assets/fonts/Goodly-Bold.woff') format('woff');
   font-weight: 700; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
-  src: url('data%20materials/Lato/Lato-Light.ttf') format('truetype');
+  src: url('assets/fonts/Lato/Lato-Light.ttf') format('truetype');
   font-weight: 300; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
-  src: url('data%20materials/Lato/Lato-Regular.ttf') format('truetype');
+  src: url('assets/fonts/Lato/Lato-Regular.ttf') format('truetype');
   font-weight: 400; font-style: normal; font-display: swap;
 }
 @font-face {
   font-family: 'Lato';
-  src: url('data%20materials/Lato/Lato-Bold.ttf') format('truetype');
+  src: url('assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
   font-weight: 700; font-style: normal; font-display: swap;
 }
 
