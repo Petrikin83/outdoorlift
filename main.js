@@ -20,6 +20,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 reveals.forEach(el => revealObserver.observe(el));
 
 // Stagger grid items
+document.querySelectorAll('.trust-bar .trust-stat').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.08}s`;
+});
 document.querySelectorAll('.projects-grid .project-item').forEach((el, i) => {
   el.style.transitionDelay = `${i * 0.07}s`;
 });
