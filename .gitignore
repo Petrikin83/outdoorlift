@@ -1,11 +1,30 @@
-# Research screenshots (generated during analysis)
-*.jpeg
-*.jpg
-!assets/images/*.jpg
-!assets/images/*.JPG
+# Root-level screenshots (generated during analysis/dev)
+/*.png
+/*.jpeg
+/*.jpg
+
+# Version screenshots inside assets
+/assets/v*.png
+/assets/v*.jpg
+/assets/v-*.jpg
+/screenshots/
+
+# Raw source files in data materials (keep only fonts)
+data materials/*.mp4
+data materials/*.jpg
+data materials/*.JPG
+data materials/*.pptx
 
 # Playwright temp files
 .playwright-mcp/
+
+# Claude session files
+.claude/
+skills-lock.json
+
+# Temp working files
+temp_cdc.html
+FUNNEL-CHECKLIST.md
 
 # OS
 .DS_Store
