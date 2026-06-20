@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-20T11:30:00Z",
+  "title": "Design System: OutdoorLift — CDC",
+  "extensions": {
+    "colorMeta": {
+      "ember":        { "role": "primary",   "displayName": "CDC Ember",           "canonical": "#ff751f", "tonalRamp": ["#3d1900","#6b2c00","#994000","#c45a0a","#e5621a","#ff751f","#ff9a5c","#ffbe9e","#fde8d8","#fff5ef"] },
+      "ember-deep":   { "role": "primary",   "displayName": "CDC Ember (on light)","canonical": "#c45a0a", "tonalRamp": ["#3d1900","#6b2c00","#994000","#c45a0a","#e5621a","#ff751f","#ff9a5c","#ffbe9e","#fde8d8","#fff5ef"] },
+      "ember-hover":  { "role": "state",     "displayName": "Ember Hover",         "canonical": "#e5621a", "tonalRamp": [] },
+      "site-dark":    { "role": "neutral",   "displayName": "Site Dark",           "canonical": "#2e2e2e", "tonalRamp": ["#0a0a0a","#1a1a1a","#2e2e2e","#444444","#5a5a5a","#717171","#8e8e8e","#ababab","#c8c8c8","#e5e5e5"] },
+      "fog":          { "role": "neutral",   "displayName": "Fog",                 "canonical": "#f3f4f5", "tonalRamp": ["#c5c7c9","#d0d2d4","#dcdde0","#e8e9eb","#f3f4f5","#f8f9f9","#fbfbfc","#fdfdfd","#fefefe","#ffffff"] },
+      "white":        { "role": "neutral",   "displayName": "White",               "canonical": "#ffffff", "tonalRamp": [] },
+      "trail-ash":    { "role": "neutral",   "displayName": "Trail Ash",           "canonical": "#696969", "tonalRamp": ["#1a1a1a","#2e2e2e","#444444","#555555","#696969","#808080","#9a9a9a","#b5b5b5","#d0d0d0","#ebebeb"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display",  "purpose": "Hero headline only. Tight line-height, negative tracking." },
+      "headline": { "displayName": "Headline", "purpose": "All section h2. Fluid clamp, negative tracking." },
+      "title":    { "displayName": "Title",    "purpose": "Logo product name, pillar h3." },
+      "body":     { "displayName": "Body",     "purpose": "All paragraph text. Max 65ch line length." },
+      "label":    { "displayName": "Label",    "purpose": "Overlines, trust labels, button text, nav links. Always uppercase." }
+    },
+    "shadows": [
+      { "name": "header-lift", "value": "0 1px 24px rgba(0,0,0,0.07)", "purpose": "Applied to sticky header after 8px scroll only. The only permitted shadow in the system." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.22, 0.61, 0.36, 1)", "purpose": "All state transitions: button hover, header shadow, reveal animations." },
+      { "name": "reveal-duration", "value": "0.75s", "purpose": "Scroll-reveal opacity + translateY. Threshold 0.12, rootMargin -48px." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "1080px", "notes": "Header collapses to mobile layout: pictogram logo, hamburger, no nav links." },
+      { "name": "mobile", "value": "768px",  "notes": "Section padding reduces to 88px. Projects grid 2-col." },
+      { "name": "small",  "value": "480px",  "notes": "Trust bar 2x2 grid. Hero title clamp floor." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA button used in header, projects section, capacity section.",
+      "html": "<a class=\"ds-btn-primary\">See all installations →</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; font-family: 'Lato', system-ui, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 30px; padding: 14px 36px; border: 1.6px solid #ff751f; color: #2e2e2e; background: #ff751f; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background 0.22s cubic-bezier(0.22,0.61,0.36,1), border-color 0.22s cubic-bezier(0.22,0.61,0.36,1); } .ds-btn-primary:hover { background: #e5621a; border-color: #e5621a; }"
+    },
+    {
+      "name": "Hero Button",
+      "kind": "button",
+      "refersTo": "button-hero",
+      "description": "Larger CTA button used in the hero section.",
+      "html": "<a class=\"ds-btn-hero\">Explore the technology →</a>",
+      "css": ".ds-btn-hero { display: inline-flex; align-items: center; gap: 10px; font-family: 'Lato', system-ui, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 30px; padding: 16px 44px; border: 1.6px solid #ff751f; color: #2e2e2e; background: #ff751f; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background 0.22s cubic-bezier(0.22,0.61,0.36,1), border-color 0.22s cubic-bezier(0.22,0.61,0.36,1); } .ds-btn-hero:hover { background: #e5621a; border-color: #e5621a; }"
+    },
+    {
+      "name": "Site Header",
+      "kind": "nav",
+      "description": "Sticky header. Transparent over hero, white with shadow after scroll.",
+      "html": "<header class=\"ds-header\"><div class=\"ds-header-inner\"><a class=\"ds-logo\"><span class=\"ds-logo-product\">Outdoor Lifts</span></a><nav class=\"ds-nav\"><a href=\"#\">Projects</a><a href=\"#\">How it works</a></nav><a class=\"ds-btn-primary\">Visit cdc.company</a></div></header>",
+      "css": ".ds-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 100px; background: transparent; transition: height 0.35s cubic-bezier(0.22,0.61,0.36,1), background 0.35s, box-shadow 0.35s; } .ds-header.scrolled { height: 80px; background: #ffffff; box-shadow: 0 1px 24px rgba(0,0,0,0.07); } .ds-header-inner { max-width: 1280px; margin: 0 auto; padding: 0 48px; height: 100%; display: flex; align-items: center; gap: 48px; } .ds-logo-product { font-family: 'Goodly', system-ui, sans-serif; font-weight: 600; font-size: clamp(22px, 2.4vw, 34px); color: #ffffff; } .ds-header.scrolled .ds-logo-product { color: #2e2e2e; } .ds-nav { display: flex; gap: 36px; flex: 1; justify-content: center; } .ds-nav a { font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #ffffff; } .ds-header.scrolled .ds-nav a { color: #2e2e2e; }"
+    },
+    {
+      "name": "Trust Stat",
+      "kind": "custom",
+      "description": "One stat in the trust bar. Light fog background. Orange number (deep variant), ash label.",
+      "html": "<div class=\"ds-trust-stat\"><span class=\"ds-trust-num\">1.2M</span><span class=\"ds-trust-label\">Annual riders, Langkawi</span></div>",
+      "css": ".ds-trust-stat { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 40px; text-align: center; } .ds-trust-num { font-family: 'Goodly', system-ui, sans-serif; font-weight: 700; font-size: clamp(28px, 3.6vw, 52px); line-height: 1; color: #c45a0a; } .ds-trust-label { font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #696969; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "description": "Project grid item. Full-bleed image, caption overlay at bottom. Dark section context.",
+      "html": "<figure class=\"ds-project-card\"><img src=\"\" alt=\"Langkawi Sky Bridge, Malaysia\" /><figcaption><span class=\"ds-project-name\">Langkawi · Malaysia</span><span class=\"ds-project-spec\">Tourist attraction · 1.2M visitors / year</span></figcaption></figure>",
+      "css": ".ds-project-card { position: relative; overflow: hidden; } .ds-project-card img { width: 100%; height: 420px; object-fit: cover; border-radius: 2px; display: block; } .ds-project-card figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 24px; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%); display: flex; flex-direction: column; gap: 4px; } .ds-project-name { font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.92); } .ds-project-spec { font-family: 'Lato', sans-serif; font-size: 11px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.55); }"
+    },
+    {
+      "name": "Capacity Tier Row",
+      "kind": "custom",
+      "description": "One row in the capacity tiers table. 3-column grid. No card, no shadow.",
+      "html": "<div class=\"ds-tier\"><div class=\"ds-tier-label\">Hotels &amp; restaurants</div><div class=\"ds-tier-desc\">connect every level of the property</div><div class=\"ds-tier-spec\">10 P / 750 kg</div></div>",
+      "css": ".ds-tier { display: grid; grid-template-columns: 280px 1fr 180px; align-items: center; gap: 32px; padding: 26px 0; border-bottom: 1px solid rgba(46,46,46,0.1); transition: background 0.2s; } .ds-tier:hover { background: #f3f4f5; } .ds-tier-label { font-family: 'Goodly', sans-serif; font-weight: 600; font-size: 20px; color: #2e2e2e; } .ds-tier-desc { font-size: 15px; color: #696969; font-style: italic; } .ds-tier-spec { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #c45a0a; text-align: right; }"
+    },
+    {
+      "name": "FAQ Item",
+      "kind": "custom",
+      "description": "Accordion item using native details/summary. Plus rotates to times on open.",
+      "html": "<details class=\"ds-faq-item\"><summary class=\"ds-faq-question\">Can it navigate around trees and natural obstacles?</summary><p class=\"ds-faq-answer\">Yes. This is the system's core differentiator. The curving guide rails can change direction and incline simultaneously.</p></details>",
+      "css": ".ds-faq-item { border-bottom: 1px solid rgba(46,46,46,0.1); } .ds-faq-question { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; cursor: pointer; list-style: none; font-family: 'Goodly', sans-serif; font-weight: 600; font-size: 20px; color: #2e2e2e; gap: 24px; user-select: none; } .ds-faq-question::-webkit-details-marker { display: none; } .ds-faq-question::after { content: '+'; font-family: 'Lato', sans-serif; font-size: 24px; font-weight: 300; color: #ff751f; flex-shrink: 0; transition: transform 0.3s cubic-bezier(0.22,0.61,0.36,1); } .ds-faq-item[open] .ds-faq-question::after { transform: rotate(45deg); } .ds-faq-answer { font-size: 17px; line-height: 1.8; color: #2e2e2e; padding-bottom: 32px; max-width: 720px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Mountain Ridge Site",
+    "overview": "This system feels like a site plan for mountain infrastructure: raw photography of real terrain, structural typography, signal orange used the way safety markers are used on a job site. Nothing decorative. Every element either carries load or stays invisible.\n\nThe palette is minimal by necessity, not restraint. CDC Ember (#ff751f) is the only signal color. Everything else is surface. Sections alternate dark and light to create rhythm without competing visual weight. No two dark sections adjacent.\n\nReal photography from real installations is non-negotiable. The Langkawi installation is the hero credential; every other project card extends that proof.",
+    "keyCharacteristics": [
+      "Signal orange on dark: full #ff751f brightness",
+      "Signal orange as text on light: always #c45a0a (ember-deep)",
+      "Goodly display font for all headings — custom weight, not a web default",
+      "Lato body — CDC brand requirement",
+      "Section spacing varies deliberately: 128px standard, 160px editorial, 88px utility",
+      "Zero decoration: no gradients, no glassmorphism, no icon arrays"
+    ],
+    "rules": [
+      { "name": "The Two-Orange Rule", "body": "CDC Ember (#ff751f) is for dark backgrounds. CDC Ember Deep (#c45a0a) is for light and white backgrounds. Never use the full ember on white or fog as text.", "section": "colors" },
+      { "name": "The One Signal Rule", "body": "Orange is the only accent color. It appears on less than 15% of any given screen. Its scarcity is the point.", "section": "colors" },
+      { "name": "The Goodly-Only Headings Rule", "body": "Every h1, h2, h3 uses Goodly. Lato is prohibited in headings.", "section": "typography" },
+      { "name": "The Tight Display Rule", "body": "Hero display text uses line-height 0.95 and negative tracking. Compressed, like type on engineering drawings.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. The header shadow is the only permitted shadow, and only as a scroll-state signal.", "section": "elevation" }
+    ],
+    "dos": [
+      "Use CDC Ember (#ff751f) exclusively on dark backgrounds",
+      "Use CDC Ember Deep (#c45a0a) whenever orange appears as text on white or fog backgrounds",
+      "Keep all button text Site Dark (#2e2e2e) on Ember backgrounds — 6.7:1 contrast",
+      "Alternate section backgrounds: dark → light → white. Never two dark sections adjacent",
+      "Use real installation photography from CDC's actual projects",
+      "Keep Goodly for every heading — display, headline, title",
+      "Use Lato 700 uppercase for all labels, overlines, button text, navigation",
+      "Vary section padding: 128px standard, 160px editorial, 88px utility",
+      "Use negative letter-spacing on display and headline text"
+    ],
+    "donts": [
+      "Don't use CDC Ember (#ff751f) as text color on white or fog",
+      "Don't use white text on Ember buttons — 2.7:1 contrast fails WCAG AA",
+      "Don't add side-stripe border accents (border-left colored stripe)",
+      "Don't use gradient text (background-clip: text)",
+      "Don't add glassmorphism, blurs, or translucent layers",
+      "Don't use numbered step treatments (01/02/03 pattern)",
+      "Don't use pill badge labels — SaaS cliché",
+      "Don't add hero eyebrow chips (tracked-caps label above H1)",
+      "Don't use em-dashes in body copy — AI writing tell",
+      "Don't animate layout properties (padding, margin, height, width)",
+      "Don't add shadows to cards, sections, or images",
+      "Don't place identical card grids (icon + heading + text repeated)",
+      "Don't use Lato in headings or Goodly in body copy",
+      "Don't use Inter, DM Sans, Plus Jakarta Sans, Fraunces, or reflex-reject fonts",
+      "Don't add third-party JavaScript, frameworks, or build tools"
+    ]
+  }
+}
