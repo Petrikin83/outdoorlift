@@ -9,7 +9,7 @@
   --orange:       #ff751f;
   --orange-hover: #e5621a;
   --text:         #2e2e2e;
-  --muted:        #767676;
+  --muted:        #696969;
   --ease:         cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -129,7 +129,7 @@ a { color: inherit; text-decoration: none; }
 
 .btn-primary {
   background: var(--orange);
-  color: var(--white);
+  color: var(--dark);
   border-color: var(--orange);
 }
 .btn-primary:hover {
@@ -149,7 +149,7 @@ a { color: inherit; text-decoration: none; }
   border-radius: 30px;
   padding: 16px 44px;
   border: 1.6px solid var(--orange);
-  color: var(--white);
+  color: var(--dark);
   background: var(--orange);
   cursor: pointer;
   white-space: nowrap;
@@ -163,7 +163,7 @@ a { color: inherit; text-decoration: none; }
 
 .btn-primary-large {
   background: var(--orange);
-  color: var(--white);
+  color: var(--dark);
   border-color: var(--orange);
   font-size: 14px;
   padding: 16px 36px;
@@ -736,7 +736,7 @@ a { color: inherit; text-decoration: none; }
   gap: 32px;
   padding: 26px 0;
   border-bottom: 1px solid rgba(46,46,46,0.1);
-  transition: background 0.2s, padding 0.2s, margin 0.2s;
+  transition: background 0.2s;
 }
 
 .tier:hover {
@@ -955,6 +955,18 @@ a { color: inherit; text-decoration: none; }
 }
 .reveal.reveal-left.is-visible {
   transform: none;
+}
+
+/* Orange text on light/white backgrounds — darker for contrast */
+.trust-bar .trust-num,
+.trust-bar .accent,
+.pillars .accent,
+.capacity-section .accent,
+.capacity-section .tier-spec,
+.safety-section .overline,
+.faq-section .accent,
+.overview .accent {
+  color: #c45a0a;
 }
 
 /* ---- RESPONSIVE ---- */
