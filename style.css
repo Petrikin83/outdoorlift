@@ -994,7 +994,7 @@ a { color: inherit; text-decoration: none; }
   .logo-sep { height: 22px; }
   .header.scrolled .logo-sep { height: 18px; }
   .logo-product { font-size: 26px; }
-  .header.scrolled .logo-product { font-size: 20px; }
+  .header.scrolled .logo-product { font-size: 22px; color: #c45a0a; }
 
   .mobile-nav { top: 64px; }
   .header.scrolled .mobile-nav { top: 52px; }
