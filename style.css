@@ -69,6 +69,11 @@ a { color: inherit; text-decoration: none; }
   src: url('assets/fonts/Lato/Lato-Bold.ttf') format('truetype');
   font-weight: 700; font-style: normal; font-display: swap;
 }
+@font-face {
+  font-family: 'Lato';
+  src: url('assets/fonts/Lato/Lato-Italic.ttf') format('truetype');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
 
 /* ---- UTILITIES ---- */
 
@@ -138,29 +143,6 @@ a { color: inherit; text-decoration: none; }
   border-color: var(--orange-hover);
 }
 
-.btn-hero-fill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Lato', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 30px;
-  padding: 16px 44px;
-  border: 1.6px solid var(--orange);
-  color: var(--dark);
-  background: var(--orange);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.22s var(--ease), border-color 0.22s var(--ease);
-  margin-top: 52px;
-}
-.btn-hero-fill:hover {
-  background: var(--orange-hover);
-  border-color: var(--orange-hover);
-}
 
 .btn-primary-large {
   background: var(--orange);
@@ -998,14 +980,19 @@ a { color: inherit; text-decoration: none; }
 .tech-text.is-visible .tech-features li:nth-child(4) { transition-delay: 0.36s; }
 .tech-text.is-visible .tech-features li:nth-child(5) { transition-delay: 0.43s; }
 .tech-text.is-visible .tech-features li:nth-child(6) { transition-delay: 0.50s; }
-.tech-text.is-visible .tech-features li:nth-child(7) { transition-delay: 0.57s; }
+.tech-text.is-visible .tech-features li:nth-child(7)  { transition-delay: 0.57s; }
+.tech-text.is-visible .tech-features li:nth-child(8)  { transition-delay: 0.64s; }
+.tech-text.is-visible .tech-features li:nth-child(9)  { transition-delay: 0.71s; }
+.tech-text.is-visible .tech-features li:nth-child(10) { transition-delay: 0.78s; }
 
 .tech-features li::before {
-  content: '—';
+  content: '';
   position: absolute;
   left: 0;
-  color: var(--orange);
-  font-weight: 700;
+  top: 11px;
+  width: 8px;
+  height: 2px;
+  background: var(--orange);
 }
 
 .tech-image img {
@@ -1245,8 +1232,6 @@ a { color: inherit; text-decoration: none; }
   }
   .hero { flex-direction: column; }
   .hero-sub { position: static; margin-top: 20px; padding: 0 24px; text-align: left; }
-  .btn-hero-fill { padding: 14px 28px; margin-top: 36px; }
-
   .trust-bar { padding: 48px 0; }
   .trust-stat { padding: 0 16px; }
   .trust-sep { height: 40px; }
