@@ -108,7 +108,7 @@ a { color: inherit; text-decoration: none; }
 .section-heading {
   font-family: 'Goodly', sans-serif;
   font-weight: 700;
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(32px, 4.4vw, 56px);
   line-height: 1.05;
   letter-spacing: -0.015em;
   color: var(--dark);
@@ -472,7 +472,7 @@ a { color: inherit; text-decoration: none; }
 .overview-heading {
   font-family: 'Goodly', sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 3.6vw, 48px);
+  font-size: clamp(32px, 4.4vw, 56px);
   line-height: 1.08;
   letter-spacing: -0.02em;
   color: var(--dark);
@@ -603,7 +603,7 @@ a { color: inherit; text-decoration: none; }
 .pillar-title {
   font-family: 'Goodly', sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   color: var(--dark);
   margin-bottom: 20px;
 }
@@ -640,7 +640,7 @@ a { color: inherit; text-decoration: none; }
 .safety-heading {
   font-family: 'Goodly', sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 4vw, 52px);
+  font-size: clamp(32px, 4.4vw, 56px);
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--dark);
@@ -670,7 +670,7 @@ a { color: inherit; text-decoration: none; }
 .cta-heading {
   font-family: 'Goodly', sans-serif;
   font-weight: 700;
-  font-size: clamp(48px, 7.5vw, 96px);
+  font-size: clamp(40px, 5.6vw, 72px);
   line-height: 1.0;
   letter-spacing: -0.02em;
   color: var(--dark);
@@ -757,7 +757,7 @@ a { color: inherit; text-decoration: none; }
 .contact-heading {
   font-family: 'Goodly', sans-serif;
   font-weight: 700;
-  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-size: clamp(40px, 5.6vw, 72px);
   color: var(--white);
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -956,7 +956,7 @@ a { color: inherit; text-decoration: none; }
 .tech-heading {
   font-family: 'Goodly', sans-serif;
   font-weight: 700;
-  font-size: clamp(28px, 4vw, 52px);
+  font-size: clamp(32px, 4.4vw, 56px);
   line-height: 1.1;
   color: var(--white);
   margin-bottom: 32px;
