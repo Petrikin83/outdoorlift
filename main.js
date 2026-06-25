@@ -53,8 +53,7 @@ function runCounters() {
 
   const configs = [
     { el: nums[0], from: 2000, to: 2009, fmt: v => Math.round(v).toString() },
-    { el: nums[1], from: 0,    to: 1.2,  fmt: v => v.toFixed(1) + 'M' },
-    { el: nums[2], from: 0,    to: 2100, fmt: v => {
+    { el: nums[1], from: 0,    to: 2100, fmt: v => {
       const n = Math.round(v);
       return n.toLocaleString('en-US') + ' kg';
     }},
