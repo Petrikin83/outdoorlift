@@ -1,5 +1,5 @@
 /* ============================================================
-   OutdoorLift — main.js
+   Outdoor Lifts — main.js
    ============================================================ */
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -34,7 +34,6 @@ document.querySelectorAll('.reveal, .reveal-img').forEach(el => revealObserver.o
   ['.projects-grid .project-item', 0.07],
   ['.pillars-grid .pillar',        0.11],
   ['.capacity-tiers .tier',        0.08],
-  ['.faq-list .faq-item',          0.07],
 ].forEach(([selector, step]) => {
   document.querySelectorAll(selector).forEach((el, i) => {
     el.style.transitionDelay = `${i * step}s`;
@@ -106,25 +105,44 @@ if (heroMedia && heroSection && !prefersReducedMotion) {
 
 // ---- Header scroll state ----
 const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 8);
-}, { passive: true });
+if (header) {
+  const setScrolled = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  setScrolled(); // apply on load in case browser restored scroll position
+  window.addEventListener('scroll', setScrolled, { passive: true });
+}
 
 // ---- Mobile nav ----
 const navToggle = document.querySelector('.nav-toggle');
 const mobileNav  = document.getElementById('mobile-nav');
 
 if (navToggle && mobileNav) {
-  navToggle.addEventListener('click', () => {
-    const open = mobileNav.classList.toggle('is-open');
+  const setOpen = (open) => {
+    mobileNav.classList.toggle('is-open', open);
     navToggle.setAttribute('aria-expanded', String(open));
     mobileNav.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) {
+      // Focus first link inside the mobile nav
+      const firstLink = mobileNav.querySelector('a');
+      if (firstLink) firstLink.focus();
+    } else {
+      navToggle.focus();
+    }
+  };
+
+  navToggle.addEventListener('click', () => {
+    setOpen(!mobileNav.classList.contains('is-open'));
   });
+
+  // Close on link tap
   mobileNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav.classList.remove('is-open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      mobileNav.setAttribute('aria-hidden', 'true');
-    });
+    link.addEventListener('click', () => setOpen(false));
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+      setOpen(false);
+    }
   });
 }
