@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://petrikin83.github.io/outdoorlift/sitemap.xml
