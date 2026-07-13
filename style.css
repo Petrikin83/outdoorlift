@@ -1278,8 +1278,8 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 480px) {
   .hero-title { font-size: clamp(44px, 12vw, 68px); }
-  .trust-bar-inner { flex-wrap: wrap; gap: 28px 0; }
-  .trust-stat { flex: 0 0 50%; padding: 0 12px; }
+  .trust-bar-inner { flex-direction: column; gap: 32px; }
+  .trust-stat { padding: 0; }
   .trust-sep { display: none; }
   .btn-primary-large { padding: 16px 40px; font-size: 13px; }
 }

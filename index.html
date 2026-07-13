@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
   <title>Outdoor Lifts — Self-Propelled Vertical Transport | CDC</title>
   <meta name="description" content="Self-propelled vertical transport for terrain where conventional infrastructure is not feasible. Engineered by Cableway Development Company since 2009." />
   <meta property="og:title" content="Outdoor Lifts — Self-Propelled Vertical Transport | CDC" />
@@ -19,7 +16,8 @@
   <link rel="icon" href="assets/logos/cdc-logo-orange-pictogram (4).png" type="image/png" />
   <link rel="preload" href="assets/fonts/Goodly-Bold.woff" as="font" type="font/woff" crossorigin />
   <link rel="preload" href="assets/fonts/Goodly-Semibold.woff" as="font" type="font/woff" crossorigin />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="preload" as="image" href="assets/images/hero-1920.avif" type="image/avif" fetchpriority="high" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
 
@@ -28,7 +26,7 @@
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header-inner">
-      <a href="#" class="logo" aria-label="OutdoorLift by CDC">
+      <a href="#main" class="logo" aria-label="Outdoor Lifts by CDC">
         <img src="assets/logos/cdc-logo-white.png" alt="CDC" class="logo-white" />
         <img src="assets/logos/cdc-logo-orange (5).png" alt="CDC" class="logo-full" />
         <img src="assets/logos/cdc-logo-orange-pictogram (4).png" alt="CDC" class="logo-icon" />
@@ -60,7 +58,21 @@
     <!-- HERO -->
     <section class="hero" aria-label="Hero">
       <div class="hero-media" aria-hidden="true">
-        <img src="assets/images/20170419_124027 - Kopie.jpg" alt="" width="5312" height="2988" />
+        <picture>
+          <source
+            type="image/avif"
+            srcset="assets/images/hero-960.avif 960w, assets/images/hero-1920.avif 1920w"
+            sizes="100vw" />
+          <img
+            src="assets/images/hero-1920.jpg"
+            srcset="assets/images/hero-960.jpg 960w, assets/images/hero-1920.jpg 1920w"
+            sizes="100vw"
+            alt=""
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+            decoding="async" />
+        </picture>
       </div>
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="container">
@@ -102,7 +114,7 @@
           <h2 class="overview-heading">
             Turn inaccessible terrain<br>into <span class="accent">operational space.</span>
           </h2>
-          <p class="overview-body">OutdoorLift is the vertical transport technology by Cableway Development Company (CDC): a self-propelled cabin system that installs on hillsides without excavation, cable, or machine room. Designed for hotels, resorts, tourist attractions, and urban transit across slopes where funiculars and conventional elevators cannot go.</p>
+          <p class="overview-body">The Outdoor Lift is CDC's vertical transport system: a self-propelled cabin that installs on hillsides without excavation, cable, or machine room. Designed for hotels, resorts, tourist attractions, and urban transit across slopes where funiculars and conventional elevators cannot go.</p>
           <p class="overview-body">The terrain that blocked development becomes operational area. Hillside accommodation, tourist attractions, and transit routes that serve communities, without funicular-grade excavation costs.</p>
         </div>
         <div class="overview-image reveal reveal-img">
@@ -290,7 +302,7 @@
     <div class="container brand-bridge-inner">
       <div class="brand-bridge-text">
         <span class="overline">A CDC technology</span>
-        <p>OutdoorLift is developed and manufactured by Cableway Development Company, a European engineering company specialising in vertical transport systems, headquartered in Bolzano, South Tyrol, Italy.</p>
+        <p>The Outdoor Lift is developed and manufactured by Cableway Development Company, a European engineering firm specializing in vertical transport systems, headquartered in Bolzano, South Tyrol, Italy.</p>
       </div>
       <a href="https://www.cdc.company/?utm_source=outdoorlift-funnel&utm_medium=brand-bridge&utm_campaign=outdoorlift" target="_blank" rel="noopener noreferrer" class="brand-bridge-link">
         Explore the full CDC portfolio <span aria-hidden="true">→</span>
