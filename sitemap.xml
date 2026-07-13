@@ -4,6 +4,7 @@
   <url>
     <loc>https://petrikin83.github.io/outdoorlift/</loc>
     <lastmod>2026-07-13</lastmod>
+    <!-- Bump this when meaningful content changes; GitHub Actions could automate later. -->
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://petrikin83.github.io/outdoorlift/" />

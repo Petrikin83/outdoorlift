@@ -4,13 +4,6 @@
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// ---- Hero video ----
-const heroVideo = document.querySelector('.hero-media video');
-if (heroVideo && prefersReducedMotion) {
-  heroVideo.pause();
-  heroVideo.removeAttribute('autoplay');
-}
-
 // ---- Scroll reveal (fade+rise for .reveal, clip-path wipe for .reveal-img) ----
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -116,15 +109,16 @@ const navToggle = document.querySelector('.nav-toggle');
 const mobileNav  = document.getElementById('mobile-nav');
 
 if (navToggle && mobileNav) {
+  const focusables = () => Array.from(mobileNav.querySelectorAll('a, button'));
+
   const setOpen = (open) => {
     mobileNav.classList.toggle('is-open', open);
     navToggle.setAttribute('aria-expanded', String(open));
     mobileNav.setAttribute('aria-hidden', String(!open));
     document.body.style.overflow = open ? 'hidden' : '';
     if (open) {
-      // Focus first link inside the mobile nav
-      const firstLink = mobileNav.querySelector('a');
-      if (firstLink) firstLink.focus();
+      const items = focusables();
+      if (items[0]) items[0].focus();
     } else {
       navToggle.focus();
     }
@@ -139,10 +133,26 @@ if (navToggle && mobileNav) {
     link.addEventListener('click', () => setOpen(false));
   });
 
-  // Close on Escape
+  // Keyboard: Escape closes, Tab traps within the panel
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+    if (!mobileNav.classList.contains('is-open')) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
       setOpen(false);
+      return;
+    }
+    if (e.key === 'Tab') {
+      const items = focusables();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 }

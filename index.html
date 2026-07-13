@@ -32,8 +32,13 @@
   <link rel="apple-touch-icon" href="assets/logos/favicon.png" />
   <link rel="preload" href="assets/fonts/Goodly-Bold.woff" as="font" type="font/woff" crossorigin />
   <link rel="preload" href="assets/fonts/Goodly-Semibold.woff" as="font" type="font/woff" crossorigin />
-  <link rel="preload" as="image" href="assets/images/hero-1920.avif" type="image/avif" fetchpriority="high" />
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="preload" as="image"
+        href="assets/images/hero-1920.avif"
+        imagesrcset="assets/images/hero-960.avif 960w, assets/images/hero-1920.avif 1920w"
+        imagesizes="100vw"
+        type="image/avif"
+        fetchpriority="high" />
+  <link rel="stylesheet" href="style.css?v=6" />
 
   <script type="application/ld+json">
   {
@@ -41,13 +46,13 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://cdc.company/#organization",
+        "@id": "https://www.cdc.company/#organization",
         "name": "Cableway Development Company",
         "alternateName": "CDC",
-        "url": "https://cdc.company",
-        "logo": "https://petrikin83.github.io/outdoorlift/assets/logos/cdc-logo-orange%20%285%29.png",
+        "url": "https://www.cdc.company",
+        "logo": "https://petrikin83.github.io/outdoorlift/assets/logos/cdc-logo-full.png",
         "sameAs": [
-          "https://cdc.company"
+          "https://www.cdc.company"
         ],
         "address": {
           "@type": "PostalAddress",
@@ -69,17 +74,17 @@
         "@type": "Product",
         "name": "Outdoor Lifts",
         "description": "Self-propelled cabin lift for outdoor and off-road environments — installs on hillsides without excavation, cable, or machine room.",
-        "brand": { "@id": "https://cdc.company/#organization" },
-        "manufacturer": { "@id": "https://cdc.company/#organization" },
-        "category": "Vertical transport",
+        "brand": { "@id": "https://www.cdc.company/#organization" },
+        "manufacturer": { "@id": "https://www.cdc.company/#organization" },
+        "category": "Inclined lift / outdoor vertical transport",
         "image": "https://petrikin83.github.io/outdoorlift/assets/images/og-card.jpg",
-        "url": "https://cdc.company/outdoor-lifts/"
+        "url": "https://www.cdc.company/outdoor-lifts/"
       },
       {
         "@type": "WebSite",
         "url": "https://petrikin83.github.io/outdoorlift/",
         "name": "Outdoor Lifts by CDC",
-        "publisher": { "@id": "https://cdc.company/#organization" },
+        "publisher": { "@id": "https://www.cdc.company/#organization" },
         "inLanguage": "en"
       }
     ]
@@ -95,8 +100,8 @@
     <div class="container header-inner">
       <a href="#main" class="logo" aria-label="Outdoor Lifts by CDC">
         <img src="assets/logos/cdc-logo-white.png" alt="CDC" class="logo-white" />
-        <img src="assets/logos/cdc-logo-orange (5).png" alt="CDC" class="logo-full" />
-        <img src="assets/logos/cdc-logo-orange-pictogram (4).png" alt="CDC" class="logo-icon" />
+        <img src="assets/logos/cdc-logo-full.png" alt="" class="logo-full" />
+        <img src="assets/logos/cdc-logo-mark.png" alt="" class="logo-icon" />
         <span class="logo-sep" aria-hidden="true"></span>
         <span class="logo-product">Outdoor Lifts</span>
       </a>
@@ -261,7 +266,7 @@
           </div>
           <div class="pillar reveal">
             <h3 class="pillar-title">Safety</h3>
-            <p>Redundant braking and continuous remote diagnostics. Backup power for uninterrupted operation, integrated emergency communication, and engineering to the applicable national passenger transport standards for each project country.</p>
+            <p>Redundant braking, continuous remote diagnostics, backup power, and integrated emergency communication. Every installation is certified to the national passenger-transport standards of the destination country.</p>
           </div>
         </div>
       </div>
@@ -281,7 +286,7 @@
             <li>Multiple intermediate stops along the route</li>
             <li>Wheelchair accessible entrances as standard</li>
             <li>Real-time remote diagnostics and monitoring</li>
-            <li>No pulling rope: continuous drive enables long, winding routes</li>
+            <li>No haul cable — the cabin carries its own drive, enabling long winding routes</li>
           </ul>
         </div>
         <div class="tech-image reveal reveal-img">
@@ -295,7 +300,7 @@
       <div class="container">
         <div class="capacity-header reveal">
           <h2 class="section-heading">Built for <span class="accent">five</span> applications</h2>
-          <p class="capacity-intro">A single system, scaled to the project. From private hillside homes to high-volume public transit. Also used for agricultural access, industrial cargo, and resort logistics where wheeled vehicles cannot reach.</p>
+          <p class="capacity-intro">A single system, scaled to the project. From private hillside homes to high-volume public transit — configurable to five standard capacities, engineered for the specific site.</p>
         </div>
         <div class="capacity-tiers">
           <div class="tier reveal">
@@ -319,7 +324,7 @@
             <div class="tier-spec">14 pers. / 1050 kg</div>
           </div>
           <div class="tier reveal">
-            <div class="tier-label">Public short haul transit</div>
+            <div class="tier-label">Public short-haul transit</div>
             <div class="tier-desc">funicular-grade capacity, without excavation or fixed-rail infrastructure cost</div>
             <div class="tier-spec">2×14 pers. / 2100 kg</div>
           </div>
@@ -343,7 +348,7 @@
           <h2 class="safety-heading">
             Safety is not<br>a feature. It is<br>the <span class="accent">foundation.</span>
           </h2>
-          <p>Every Outdoor Lift system is engineered with independent fail-safe mechanisms: redundant braking systems that engage automatically, continuous real-time monitoring, and on-board diagnostics. Backup power ensures uninterrupted operation in all conditions; integrated emergency communication is standard on every cabin. CDC engineers each installation to the applicable national passenger transport standards for the project country.</p>
+          <p>Every Outdoor Lift is engineered with independent fail-safe mechanisms: redundant braking that engages automatically, continuous real-time monitoring, and on-board diagnostics. Backup power keeps the cabin operating in any condition; integrated emergency communication is standard. Each installation is certified to the passenger-transport standards of the destination country.</p>
         </div>
       </div>
     </section>
@@ -356,7 +361,7 @@
         </h2>
         <p class="cta-body reveal">Our engineers will define the right configuration for your site and provide a preliminary cost model, at no obligation.</p>
         <p class="cta-meta reveal">Cableway Development Company &nbsp;·&nbsp; Since 2009</p>
-        <a href="https://www.cdc.company/outdoor-lifts/?utm_source=outdoorlift-funnel&utm_medium=cta-section&utm_campaign=outdoorlift" target="_blank" rel="noopener noreferrer" class="btn btn-primary-large reveal">
+        <a href="https://www.cdc.company/contacts/?utm_source=outdoorlift-funnel&utm_medium=cta-section&utm_campaign=outdoorlift" target="_blank" rel="noopener noreferrer" class="btn btn-primary-large reveal">
           Talk to the CDC team <span aria-hidden="true">→</span>
         </a>
       </div>
@@ -411,12 +416,12 @@
   <footer class="footer">
     <div class="container footer-inner">
       <a href="https://www.cdc.company" target="_blank" rel="noopener noreferrer" class="footer-logo" aria-label="CDC — Cableway Development Company">
-        <img src="assets/logos/cdc-logo-orange (5).png" alt="CDC — Cableway Development Company" height="40" />
+        <img src="assets/logos/cdc-logo-full.png" alt="CDC — Cableway Development Company" height="40" />
       </a>
       <p class="footer-copy">&copy; 2026 Cableway Development Company. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="main.js?v=5"></script>
+  <script src="main.js?v=6"></script>
 </body>
 </html>
