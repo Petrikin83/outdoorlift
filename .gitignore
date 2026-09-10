@@ -29,3 +29,4 @@ FUNNEL-CHECKLIST.md
 # OS
 .DS_Store
 Thumbs.db
+.audit-workspace/
