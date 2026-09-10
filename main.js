@@ -175,3 +175,72 @@ if (navToggle && mobileNav) {
     }
   });
 }
+
+// ---- Scroll progress bar ----
+const progressBar = document.getElementById('scroll-progress');
+if (progressBar && !prefersReducedMotion) {
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    if (total > 0) progressBar.style.width = (window.scrollY / total * 100) + '%';
+  }, { passive: true });
+}
+
+// ---- Section heading word split ----
+if (!prefersReducedMotion) {
+  function splitWords(el) {
+    const nodes = Array.from(el.childNodes);
+    el.innerHTML = '';
+    const frag = document.createDocumentFragment();
+    nodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.textContent.split(/(\s+)/).forEach(part => {
+          if (/^\s+$/.test(part)) {
+            frag.appendChild(document.createTextNode(part));
+          } else if (part) {
+            const hw = document.createElement('span');
+            hw.className = 'hw';
+            const hwi = document.createElement('span');
+            hwi.className = 'hwi';
+            hwi.textContent = part;
+            hw.appendChild(hwi);
+            frag.appendChild(hw);
+          }
+        });
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        const hw = document.createElement('span');
+        hw.className = 'hw';
+        const hwi = document.createElement('span');
+        hwi.className = 'hwi';
+        hwi.appendChild(node.cloneNode(true));
+        hw.appendChild(hwi);
+        frag.appendChild(hw);
+      }
+    });
+    el.appendChild(frag);
+    el.classList.add('has-split');
+  }
+
+  const headingObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        headingObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.section-heading.reveal').forEach(el => {
+    revealObserver.unobserve(el);
+    el.classList.remove('reveal');
+    splitWords(el);
+    headingObs.observe(el);
+  });
+}
+
+// ---- Overline clip wipe ----
+document.querySelectorAll('.overline').forEach(el => {
+  if (!prefersReducedMotion) {
+    el.classList.add('overline-reveal');
+    revealObserver.observe(el);
+  }
+});

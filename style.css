@@ -1214,3 +1214,63 @@ a { color: inherit; text-decoration: none; }
   outline-offset: 4px;
   border-radius: 2px;
 }
+
+/* ---- SCROLL PROGRESS BAR ---- */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--orange);
+  z-index: 200;
+  pointer-events: none;
+  will-change: width;
+}
+
+/* ---- HEADING WORD SPLIT ---- */
+.hw  { display: inline-block; }
+.hwi {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(35%);
+  transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+}
+.has-split {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+.has-split.is-visible .hwi { opacity: 1; transform: none; }
+.has-split.is-visible .hw:nth-child(1) .hwi { transition-delay: 0s; }
+.has-split.is-visible .hw:nth-child(2) .hwi { transition-delay: 0.08s; }
+.has-split.is-visible .hw:nth-child(3) .hwi { transition-delay: 0.16s; }
+.has-split.is-visible .hw:nth-child(4) .hwi { transition-delay: 0.24s; }
+.has-split.is-visible .hw:nth-child(5) .hwi { transition-delay: 0.32s; }
+
+/* ---- OVERLINE CLIP WIPE ---- */
+.overline-reveal {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+.overline-reveal.is-visible { clip-path: inset(0 0% 0 0); }
+
+/* ---- TIER HOVER ACCENT LINE ---- */
+.tier { position: relative; }
+.tier::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--orange);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s var(--ease);
+  border-radius: 0 2px 2px 0;
+}
+.tier:hover::before { transform: scaleY(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hwi { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .overline-reveal { clip-path: none !important; transition: none !important; }
+  #scroll-progress { display: none; }
+}
