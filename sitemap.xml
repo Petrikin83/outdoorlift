@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://petrikin83.github.io/outdoorlift/</loc>
+    <loc>https://outdoorlift.com/</loc>
     <lastmod>2026-07-13</lastmod>
     <!-- Bump this when meaningful content changes; GitHub Actions could automate later. -->
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://petrikin83.github.io/outdoorlift/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://petrikin83.github.io/outdoorlift/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://outdoorlift.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://outdoorlift.com/" />
   </url>
 </urlset>
