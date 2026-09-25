@@ -233,7 +233,12 @@ if (!prefersReducedMotion) {
     revealObserver.unobserve(el);
     el.classList.remove('reveal');
     splitWords(el);
-    headingObs.observe(el);
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) {
+      el.classList.add('is-visible');
+    } else {
+      headingObs.observe(el);
+    }
   });
 }
 
