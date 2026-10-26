@@ -30,3 +30,4 @@ FUNNEL-CHECKLIST.md
 .DS_Store
 Thumbs.db
 .audit-workspace/
+graphify-out/

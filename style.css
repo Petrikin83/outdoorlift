@@ -522,7 +522,6 @@ a { color: inherit; text-decoration: none; }
   object-fit: cover;
   display: block;
   border-radius: 16px;
-  transition: transform 0.65s var(--ease);
 }
 
 .project-item:first-child,
@@ -1202,8 +1201,6 @@ a { color: inherit; text-decoration: none; }
   .btn-hero   { animation: hero-rise 1s   cubic-bezier(0.16, 1, 0.3, 1) 0.85s both; }
 }
 
-/* 2. Project cards — subtle image scale on hover */
-.project-item:hover img { transform: scale(1.03); }
 
 /* 3. Magnetic buttons — add transform to transition for all button types */
 .btn,
