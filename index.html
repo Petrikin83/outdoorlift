@@ -76,7 +76,7 @@
         "@type": "Product",
         "name": "Outdoor Lifts",
         "description": "Self-propelled cabin lift for outdoor and off-road environments — installs on hillsides without excavation, cable, or machine room.",
-        "brand": { "@id": "https://www.cdc.company/#organization" },
+        "brand": { "@type": "Brand", "name": "CDC" },
         "manufacturer": { "@id": "https://www.cdc.company/#organization" },
         "category": "Inclined lift / outdoor vertical transport",
         "image": "https://outdoorlift.com/assets/images/og-card.jpg",
@@ -85,7 +85,32 @@
           "@type": "Offer",
           "url": "https://cdc.company/contacts/",
           "seller": { "@id": "https://www.cdc.company/#organization" },
-          "availability": "https://schema.org/InStock"
+          "availability": "https://schema.org/InStock",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "priceCurrency": "EUR"
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "IT",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+          },
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": "IT"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 60,
+                "maxValue": 180,
+                "unitCode": "DAY"
+              }
+            }
+          }
         }
       },
       {
